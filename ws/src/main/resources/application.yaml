@@ -1,0 +1,22 @@
+#h2 her çalıştığında verilen yeni şifreyi ortadan kaldırmak için yapılıyor.Yoksa her seferinde gidip o şifreyi alıp onunla bağlanmanız gerekmektedir.
+#spring:
+# datasource:
+#   generate-unique-name: false
+
+#Bu şekilde bir url ve username verilmeli, sonrasında ddl-auto:update denilmelidir. Böylelikle her seferinde veriyi sıfırlamayacak.
+#spring:
+# datasource:
+#   url: jdbc:h2:./devdb
+#   username: sa
+# jpa:
+#   hibernate:
+#     ddl-auto: update
+
+#hibernate validation'ı engellemek maksadıyla yapılmıştır.
+spring:
+  jpa:
+    properties:
+      javax:
+        persistence:
+          validation:
+            mode: none
